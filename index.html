@@ -4,54 +4,88 @@
 		<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
 		<style>
 			body {
-				background-color: #ffffff;
+				background-color: #1e1e1e;
 				margin: 0;
-				font-family: Arial;
+				font-family: Consolas;
+				font-size: 16px;
+				user-select: none;
 			}
 			body > div {
 				position: absolute;
 				width: fit-content;
-				height: 48px;
+				height: fit-content;
 				bottom: 50%;
 				right: 50%;
 				transform: translate(50%, 50%);
-				user-select: none;
-				background-color: #ebebeb;
-				border-radius: 8px;
-				padding: 8px;
 			}
-			#title, #links > a {
-				color: #424242;
+			body > div > div {
+				margin-top: 4px;
+				margin-bottom: 4px;
 			}
-			#title {
-				font-size: 28px;
-				font-weight: 400;
+			.bracket {
+				color: #808080;
 			}
-			#links > a {
-				font-size: 12px;
+			.tag {
+				color: #569cd6;
+			}
+			a, .text {
+				color: #ffffff;
+			}
+			a {
 				text-decoration: none;
+				user-select: auto;
 			}
-			#links > a:hover {
-				text-decoration: underline;
+			@keyframes animate {
+				to {
+					top: 0;
+					opacity: 1;
+				}
 			}
-			#links {
-				position: absolute;
-				bottom: 8px;
-				right: 8px;
-				width: 100%;
-				text-align: right;
+			.line {
+				position: relative;
+				top: 1em;
+				opacity: 0;
+				animation: animate 1s ease-in-out forwards;
+			}
+			.line:nth-child(1) {
+				animation-delay: 200ms;
+			}
+			.line:nth-child(2) {
+				animation-delay: 400ms;
+			}
+			.line:nth-child(3) {
+				animation-delay: 600ms;
+			}
+			.line:nth-child(4) {
+				animation-delay: 800ms;
+			}
+			.line:nth-child(5) {
+				animation-delay: 1000ms;
+			}
+			.line:nth-child(6) {
+				animation-delay: 1200ms;
 			}
 		</style>
 	</head>
 	<body>
 		<div>
-			<div id="title">Tim Siebigteroth</div>
-			<div id="links">
-				&raquo;
-				<a href="https://www.xing.com/profile/Tim_Siebigteroth/" target="_blank">Xing</a> 
-				<a href="https://www.linkedin.com/in/tim-siebigteroth-43113186/" target="_blank">LinkedIn</a> 
-				<a href="https://twitter.com/siebigteroth" target="_blank">Twitter</a> 
-				<a href="https://github.com/siebigteroth" target="_blank">GitHub</a>
+			<div class="line">
+				<span class="bracket">&lt;</span><span class="tag">Name</span><span class="bracket">&gt;</span><span class="text">Tim Siebigteroth</span><span class="bracket">&lt;/</span><span class="tag">Name</span><span class="bracket">&gt;</span>
+			</div>
+			<div class="line">
+				<span class="bracket">&lt;</span><span class="tag">E-Mail</span><span class="bracket">&gt;</span><a href="mailto:tim@siebigteroth.me" target="_blank">tim@siebigteroth.me</a><span class="bracket">&lt;/</span><span class="tag">E-Mail</span><span class="bracket">&gt;</span>
+			</div>
+			<div class="line">
+				<span class="bracket">&lt;</span><span class="tag">LinkedIn</span><span class="bracket">&gt;</span><a href="https://www.linkedin.com/in/tim-siebigteroth-43113186/" target="_blank">https://www.linkedin.com/in/tim-siebigteroth-43113186/</a><span class="bracket">&lt;/</span><span class="tag">LinkedIn</span><span class="bracket">&gt;</span>
+			</div>
+			<div class="line">
+				<span class="bracket">&lt;</span><span class="tag">Xing</span><span class="bracket">&gt;</span><a href="https://www.xing.com/profile/Tim_Siebigteroth/" target="_blank">https://www.xing.com/profile/Tim_Siebigteroth/</a><span class="bracket">&lt;/</span><span class="tag">Xing</span><span class="bracket">&gt;</span>
+			</div>
+			<div class="line">
+				<span class="bracket">&lt;</span><span class="tag">Twitter</span><span class="bracket">&gt;</span><a href="https://twitter.com/siebigteroth" target="_blank">https://twitter.com/siebigteroth</a><span class="bracket">&lt;/</span><span class="tag">Twitter</span><span class="bracket">&gt;</span>
+			</div>
+			<div class="line">
+				<span class="bracket">&lt;</span><span class="tag">GitHub</span><span class="bracket">&gt;</span><a href="https://github.com/siebigteroth" target="_blank">https://github.com/siebigteroth</a><span class="bracket">&lt;/</span><span class="tag">GitHub</span><span class="bracket">&gt;</span>
 			</div>
 		</div>
 	</body>
